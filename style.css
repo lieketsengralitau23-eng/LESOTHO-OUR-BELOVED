@@ -1,0 +1,160 @@
+body{
+    font-family: Tahoma, Verdana, sans-serif;
+}
+p{
+    font-size: 16px;
+}
+.navbar-brand{
+    color: #0f766e;
+    font-weight: bold;
+}
+.top{
+    background-color: #0f766e;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+.button{
+    background-color: #0f766e;
+    color: white;
+    border: none;
+}
+.button:hover{
+    background-color: #e4572e;
+    color: white;
+}
+.card{
+    border-radius: 15px;
+    overflow: hidden;
+}
+.picture{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #cfd8d7;
+}
+.footer{
+    background-color: #0f766e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.banner{
+
+    background-image: url(images/hero.jpg);
+    background-color: #0f766e;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+    text-shadow: 2px 2px 6px black;
+}
+
+
+@media (max-width: 992px){
+
+    h1{
+        font-size: 2.2rem;
+    }
+    .picture{
+        height: 180px;
+    }
+}
+@media (max-width: 768px){
+    /* tablets */
+    .top{
+        padding: 30px 15px;
+    }
+    .banner{
+        padding: 60px 15px;
+    }
+    .picture{
+        height: 160px;
+    }
+    #big{
+        max-height: 45vh;
+    }
+}
+@media (max-width: 576px){
+    /* phones */
+    h1{
+        font-size: 1.7rem;
+    }
+    .top{
+        padding: 20px 10px;
+    }
+    .banner{
+        padding: 40px 10px;
+    }
+    .banner h1{
+        font-size: 2rem;
+    }
+    .picture{
+        height: 150px;
+    }
+    .thumb{
+        height: 65px;
+    }
+    form .btn{
+        width: 100%;
+    }
+}
+
+/*  gallery page  */
+.tile{
+    background-color: #333333;
+    border-radius: 15px;
+}
+.tile img{
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;               
+    background-color: #cfd8d7;
+    border-radius: 15px 15px 0 0;    
+}
+.caption{
+    color: white;
+    padding: 10px;
+     margin: 0;
+}
+
+/* gallery page: */
+@media (max-width: 576px){
+    .tile img{
+        height: 150px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 992px){
+    body:has(.picture):not(:has(.button)) .picture{
+        height: 200px;
+    }
+}
+@media (min-width: 577px) and (max-width: 992px){
+    body:has(.picture):not(:has(.button)) h1{
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+@media (max-width: 992px){
+    body:has(.tile) h1{
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+@media (max-width: 768px){
+    body:has(.tile) .top{
+        padding: 40px;
+    }
+}
+@media (max-width: 576px){
+    body:has(.picture):not(:has(.button)) .top{
+        padding: 30px 15px;
+    }
+    body:has(.tile) .top{
+        padding: 20px;
+    }
+}
